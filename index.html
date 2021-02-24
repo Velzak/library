@@ -23,8 +23,22 @@
 	</header>
 	<section id="instructions">
 		<h2>Click the button to add a new book to your library</h2>
-		<button id="modal-button">Click to Add a Book</button>
-		
+		<button id="modal-btn">Click to Add a Book</button>
+		<section class="modal">
+			<section class="modal-content">
+				<span class="close-btn">&times;</span>
+				<h3>Please Enter your Book information</h3>
+				<p>Author</p>
+				<input id="author" type="text">
+				<p>Title</p>
+				<input id="title" type="text">
+				<p>Pages</p>
+				<input id="pages" type="number" required>
+				<p>Read?</p>
+				<input id="read" type="checkbox">
+				<button id="submit">Add Book</button>
+			</section>
+		</section>
 	</section>
 	<section id="renderArea">
 
