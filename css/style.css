@@ -5,13 +5,67 @@
 /* Box Model Hack */
 *{
   box-sizing: border-box;
+  font-family: 'Source Sans Pro', sans-serif;
 }
 
 /******************************************
 /* LAYOUT
 /*******************************************/
+body{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
 
+h1{
+  font-size: 3rem;
+}
 
+#instructions{
+  justify-content: center;
+  align-content: center;
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+h2{
+  font-weight: 400;
+}
+
+button{
+  background: rgb(162, 189, 180);
+  border-radius: 1rem;
+  border: none;
+  font-size: 2rem;
+  font-weight: 500;
+  padding: 1rem 2rem;
+  outline: none;
+}
+
+button:hover{
+  background: rgb(135, 158, 150);
+}
+button:active{
+  background: rgb(118, 138, 131);
+}
+
+#renderArea{
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.bookCard{
+  width: 15rem;
+  height: 20rem;
+  text-align: center;
+  background: rgb(209, 200, 195);
+  border-radius: 1rem;
+  margin: 1rem;
+}
 
 /******************************************
 /* ADDITIONAL STYLES
