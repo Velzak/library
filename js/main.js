@@ -26,22 +26,27 @@ document.querySelector("#modal-btn").addEventListener("click", addBookInfo);
 //Gets the input information to add to myLibrary array through popup modal
 function addBookInfo() {
   modal.style.display = "block";
-  document.querySelector("#submit").addEventListener("click", () => {
+  
+}
+
+document.querySelector("#submit").addEventListener("click", () => {
     let author = document.querySelector("#author");
     let title = document.querySelector("#title");
     let pages = document.querySelector("#pages");
     let read = document.querySelector("#read");
 
     //new Book object made from input values
-    let books = new Book(author.value, title.value, pages.value, read.value);
+
+    const books = new Book(author.value, title.value, pages.value, read.value);
 
     //push the new object to myLibrary array
     myLibrary.push(books);
+    console.log(books)
+    console.log(myLibrary.length)
 
     //display the myLibrary array
     displayBooks();
   });
-}
 
 closeBtn.onclick = function () {
   modal.style.display = "none";
@@ -59,22 +64,18 @@ function displayBooks() {
   read.classList.add("toggleRead");   
 
   for (let i = 0; i < myLibrary.length; i++) {
-      if(myLibrary[i] ){
-
-      }
-    author.textContent = myLibrary[i].author;
-    title.textContent = myLibrary[i].title;
-    pages.textContent = myLibrary[i].pages;
-    renderArea.appendChild(newSection);
-    newSection.appendChild(author);
-    newSection.appendChild(title);
-    newSection.appendChild(pages);
-    newSection.appendChild(read);
+      author.textContent = myLibrary[i].author;
+      title.textContent = myLibrary[i].title;
+      pages.textContent = myLibrary[i].pages;
+      renderArea.appendChild(newSection);
+      newSection.appendChild(author);
+      newSection.appendChild(title);
+      newSection.appendChild(pages);
+      newSection.appendChild(read);
   }
   
 
   modal.style.display = "none";
-  console.log(myLibrary)
 }
 
 
