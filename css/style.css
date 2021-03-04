@@ -50,6 +50,17 @@ button:active{
   background: rgb(118, 138, 131);
 }
 
+.toggleRead{
+  background: rgb(218,151,150);
+}
+
+.reading{
+  background: rgb(132, 206, 122);
+}
+
+/*
+  CARD LAYOUTS
+*/
 #renderArea{
   display: flex; 
   justify-content: center;
@@ -65,6 +76,18 @@ button:active{
   background: rgb(209, 200, 195);
   border-radius: 1rem;
   margin: 1rem;
+}
+.bookCard h3{
+  font-size: 1.75rem;
+  font-weight: 400;
+}
+
+.bookCard button{
+  font-size: 1.5rem;
+  padding: .5rem;
+  margin: .5rem;
+  width: 6rem;
+  font-weight: 400;
 }
 
 /******************************************
